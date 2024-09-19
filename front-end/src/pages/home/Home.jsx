@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import { Link } from 'react-router-dom'
+import InputPassword from '../../components/inputs/InputPassword'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
             <form action="" onSubmit={()=>{}}>
                 <h4 className="text-2xl mb-7 font-syne font-semibold">Log in </h4>
                 <input type="email" name="Email" id="email" placeholder='Email' className='input-box' />
+                <InputPassword />
                 <button type="submit" className="btn-primary" >Log in</button>
                 <p className='text-sm text-center mt-4 font-syne'>
                     you don't have acou yet ?{""}
