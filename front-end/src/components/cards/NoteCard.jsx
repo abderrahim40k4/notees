@@ -1,7 +1,10 @@
 import React from 'react'
 import { MdCreate, MdDelete, MdOutlinePushPin } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 const NoteCard = ({ title, date, content, tags, isPinnd, onEdit, onDelete, onPinNote }) => {
+   
+
     return (
         <div className="border rounded hover:shadow-xl p-4 bg-white transition-all ease-in-out">
             <div className="flex items-center justify-between">

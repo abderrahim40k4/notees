@@ -2,8 +2,13 @@ import React, { useState } from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import NoteCard from '../../components/cards/NoteCard'
 import {MdAdd} from "react-icons/md"
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+    const navgaiteTo = useNavigate();
+    const addNoteRoute = () =>{
+        navgaiteTo("/add-note");
+    }
     return (
         <>
             <Navbar/>
@@ -21,7 +26,7 @@ const Home = () => {
                 />
                 </div>
             </div>
-            <button className="w-16 h-16 flex items-center justify-center bg-primary hover:bg-blue-700 rounded-xl right-10 bottom-10 absolute" onClick={()=>{}}>
+            <button className="w-16 h-16 flex items-center justify-center bg-primary hover:bg-blue-700 rounded-xl right-10 bottom-10 absolute" onClick={()=>{addNoteRoute()}}>
                 <MdAdd className="text-[32px] text-white"/>
             </button>
         </>
