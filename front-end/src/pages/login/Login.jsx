@@ -40,7 +40,6 @@ const Signup = () => {
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)} 
                         />
-                        {error && <p className='text-red-500 text-xs pb-1'>{error}</p>}
 
                         <InputPassword 
                             value={password} 

@@ -15,7 +15,7 @@ const Signup = () => {
     
     const handleSignUp = async (event) => {
         event.preventDefault()
-        if (name.length < 4) {
+        if (!name) {
             setError("Please enter a valid name")
             return;
         }
@@ -24,7 +24,7 @@ const Signup = () => {
             setError("Please enter a valid email address")
             return;
         }
-        if (password.length < 8) {
+        if (!password) {
             setError("Please enter a valid password")
             return;
         }
