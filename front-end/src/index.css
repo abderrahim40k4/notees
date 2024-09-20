@@ -40,4 +40,7 @@
   .icon-btn {
     @apply text-xl text-slate-300 hover:text-primary cursor-pointer ;
   }
+  .input-label{
+    @apply font-medium font-syne
+  }
 }

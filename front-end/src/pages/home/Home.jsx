@@ -3,12 +3,15 @@ import Navbar from '../../components/navbar/Navbar'
 import NoteCard from '../../components/cards/NoteCard'
 import {MdAdd} from "react-icons/md"
 import { useNavigate } from 'react-router-dom'
+import AddNotes from './AddNotes'
+import Modal from "react-modal"
 
 const Home = () => {
-    const navgaiteTo = useNavigate();
-    const addNoteRoute = () =>{
-        navgaiteTo("/add-note");
-    }
+    const [openAddEditNote, setOpenAddEditNote] = useState({
+        isShow:false,
+        type:"add",
+        data:null,
+    });
     return (
         <>
             <Navbar/>
@@ -26,9 +29,25 @@ const Home = () => {
                 />
                 </div>
             </div>
-            <button className="w-16 h-16 flex items-center justify-center bg-primary hover:bg-blue-700 rounded-xl right-10 bottom-10 absolute" onClick={()=>{addNoteRoute()}}>
+            <button className="w-16 h-16 flex items-center justify-center bg-primary hover:bg-blue-700 rounded-xl right-10 bottom-10 absolute" 
+            onClick={()=>{setOpenAddEditNote({isShow: true, type:"add" , data:null,})}}>
                 <MdAdd className="text-[32px] text-white"/>
             </button>
+
+          <Modal
+          isOpen={openAddEditNote.isShow}
+          onRequestClose={()=>{}}
+          style={{
+            overlay:{
+                background:"rgba(0,0,0,0.2)"
+            }
+          }}
+          contentLabel=''
+          className="w-[40%] max-h-3/4 bg-white mx-auto p-5 overflow-scroll mt-14"
+          >
+
+            <AddNotes/>
+          </Modal>
         </>
     )
 }
