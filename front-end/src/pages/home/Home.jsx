@@ -43,7 +43,7 @@ const Home = () => {
             }
           }}
           contentLabel=''
-          className="w-[40%] max-h-3/4 bg-white mx-auto p-5 overflow-scroll mt-14"
+          className="w-[40%] max-h-3/4 bg-white mx-auto p-5 overflow-scroll mt-14 rounded-md scrollbar scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thumb-primary scrollbar-track-slate-100"
           >
 
             <AddNotes/>
