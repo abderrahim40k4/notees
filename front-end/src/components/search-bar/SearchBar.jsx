@@ -11,8 +11,11 @@ const SearchBar = ({value, onChange, handellSearch, onClearSearch}) => {
         value={value}
         onChange={onChange}
         />
-        <IoMdSearch size={22} className='text-slate-900 font-medium cursor-pointer' onClick={handellSearch} />
-        <MdClose  size={22} className='text-slate-900 font-medium cursor-pointer' onClick={onClearSearch} />
+        {
+            value && (<MdClose  size={22} className='text-slate-500 font-medium cursor-pointer hover:text-black' onClick={onClearSearch} />)
+        }
+        <IoMdSearch size={22} className='text-slate-500 font-medium cursor-pointer hover:text-black' onClick={handellSearch} />
+        
 
         
     </div>
