@@ -37,4 +37,7 @@
   .btn-primary{
     @apply w-full text-sm bg-primary text-white rounded my-1 p-2 hover:bg-blue-600;
   };
+  .icon-btn {
+    @apply text-xl text-slate-300 hover:text-primary cursor-pointer ;
+  }
 }
