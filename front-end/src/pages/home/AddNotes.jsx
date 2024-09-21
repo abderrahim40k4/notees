@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import TagInput from '../../components/inputs/TagInput'
+import { MdClose } from 'react-icons/md'
 
-const AddNotes = () => {
+const AddNotes = ({onClose}) => {
 
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
@@ -10,7 +11,12 @@ const AddNotes = () => {
 
 
   return (
-    <div>
+    <div className='relative'>  
+        <button className="w-10 h-10 rounded-full flex items-center justify-center absolute -top-3 -right-3 hover:bg-slate-100"
+        onClick={onClose}>
+            <MdClose className='text-xl text-slate-400'/>
+        </button>
+
         <div className="flex flex-col gap-2 ">
         <label htmlFor="" className='input-label'>enter a note Title</label>
         <input type="text"
